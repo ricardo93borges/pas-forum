@@ -1,27 +1,36 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-md-12">
+    <p id="notice"><%= notice %></p>
+  </div>
+</div>
 
-<h1>Groups</h1>
+<div class="row">
+  <div class="col-md-12">
+    <h1>Grupos</h1>
+  </div>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @groups.each do |group| %>
+<div class="row">
+  <div class="col-md-12">
+    <table class="table-striped col-md-12">
+      <thead>
       <tr>
-        <td><%= group.name %></td>
-        <td><%= link_to 'Show', group %></td>
-        <td><%= link_to 'Edit', edit_group_path(group) %></td>
-        <td><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Nome</th>
+        <th>Quantidade de usuarios nesse grupo</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+      </thead>
 
-<br>
-
-<%= link_to 'New Group', new_group_path %>
+      <tbody>
+      <% @groups.each do |group| %>
+        <tr>
+          <td><a href="<%= "/groups/#{group.id}" %>"> <%= group.name %></a></td>
+          <td><p><%= group.users.length %></p></td>
+          <!--        <td><%#= link_to 'Show', group %></td>
+        <td><%#= link_to 'Edit', edit_group_path(group) %></td>
+        <td><%#= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
