@@ -16,10 +16,15 @@
     <%= form.text_field :name %>
   </div>
 
-  <div class="field">
-    <%= form.label :group_id %>
-    <%= form.text_field :group_id %>
+  <div>
+    <select name="user[group_id]">
+      <% for group in @groups %>
+        <option value="<%= group.id %>"><%= group.name %></option>
+      <% end %>
+    </select>
   </div>
+
+
 
   <div class="field">
     <%= form.label :role %>
@@ -29,4 +34,5 @@
   <div class="actions">
     <%= form.submit %>
   </div>
+
 <% end %>
