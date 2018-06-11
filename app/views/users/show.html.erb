@@ -1,19 +1,24 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
-
-<p>
-  <strong>Group:</strong>
-  <%= @user.group.name %>
-</p>
-
-<p>
-  <strong>Role:</strong>
-  <%= @user.role %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+  <div class="col-md-12">
+    <p id="notice"><%= notice %></p>
+  </div>
+  <div class="col-md-12">
+    <p>
+      <strong>Nome:</strong>
+      <%= @user.name %>
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p>
+      <strong>Grupo:</strong>
+      <%= @user.group.name %>
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p>
+      <strong>Perfil:</strong>
+      <%= @user.role == 1 ? "Comum":"Moderador" %>
+    </p>
+  </div>
+</div>

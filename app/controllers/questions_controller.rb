@@ -10,11 +10,13 @@ class QuestionsController < ApplicationController
   # GET /questions/1
   # GET /questions/1.json
   def show
+    @user = User.find_by_role(2)
   end
 
   # GET /questions/new
   def new
     @question = Question.new
+    @user = User.find_by_role(2)
   end
 
   # GET /questions/1/edit

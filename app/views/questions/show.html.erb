@@ -1,19 +1,78 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-md-12">
+    <p id="notice"><%= notice %></p>
+  </div>
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @question.title %>
-</p>
+<div class="row">
+  <div class="col-md-12">
+    <p>
+    <h4><%= @question.title %></h4>
+    </p>
+  </div>
+</div>
 
-<p>
-  <strong>Body:</strong>
-  <%= @question.body %>
-</p>
+<div class="row">
+  <div class="col-md-12">
+    <p>
+      <%= @question.body %>
+    </p>
+    <small><i>Por <%= @question.user.name %></i></small>
+  </div>
+</div>
 
-<p>
-  <strong>User:</strong>
-  <%= @question.user.name %>
-</p>
+<br>
+<br>
 
-<%= link_to 'Edit', edit_question_path(@question) %> |
-<%= link_to 'Back', questions_path %>
+<div class="row">
+  <div class="col-md-12">
+    <h3>Responder</h3>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+
+    <form action="/answers" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓">
+      <input type="hidden" name="authenticity_token" value="W2HmyHTK8Dv/JX3DdfaeTwrC5gyms19XtFwWLRMe9rzapMGOQfpoX6Ytv+mwLfdEiry6S/M2e/n0ObMumEI5aw==">
+      <input type="hidden" name="answer[question_id]" id="answer_question_id" value="<%= @question.id %>">
+      <input type="hidden" value="<%= @user.id %>" name="answer[user_id]" id="answer_user_id">
+
+      <div class="form-group">
+        <input type="text" placeholder="Titulo" class="form-control" name="answer[title]" id="answer_title">
+      </div>
+
+      <div class="form-group">
+        <textarea placeholder="Digite aqui sua resposta" class="form-control" name="answer[body]" id="answer_body"></textarea>
+      </div>
+
+      <div class="actions">
+        <input type="submit" name="commit" value="Create Answer" data-disable-with="Create Answer" class="btn btn-primary pull-right">
+      </div>
+    </form>
+
+  </div>
+</div>
+
+<br>
+
+<div class="row">
+  <div class="col-md-12">
+    <h3>Respostas</h3>
+  </div>
+</div>
+
+<br>
+
+<% for answer in @question.answers %>
+  <div class="row">
+    <div class="col-md-12">
+      <p>
+        <b><%= answer.title %></b><br>
+        <%= answer.body %>
+      </p>
+      <small><i>Por <%= answer.user.name %></i></small>
+    </div>
+  </div>
+  <hr>
+<% end %>

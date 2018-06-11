@@ -18,7 +18,6 @@
         <th>Nome</th>
         <th>Grupo</th>
         <th>Perfil</th>
-        <th></th>
       </tr>
       </thead>
 
@@ -28,11 +27,6 @@
           <td><a href="<%= "/users/#{user.id}" %>"> <%= user.name %></a></td>
           <td><%= user.group.name %></td>
           <td><%= user.role == 2 ? "Moderador" : "Comum" %></td>
-          <td>
-            <a data-confirm="Voce tem certeza?" rel="nofollow" data-method="delete" href="<%= "/users/#{user.id}" %>">
-              Excluir
-            </a>
-          </td>
         </tr>
       <% end %>
       </tbody>

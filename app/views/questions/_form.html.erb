@@ -1,32 +1,23 @@
-<%= form_with(model: question, local: true) do |form| %>
-  <% if question.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(question.errors.count, "error") %> prohibited this question from being saved:</h2>
+<div class="row">
+  <div class="col-md-12">
+    <form action="/questions" accept-charset="UTF-8" method="post">
+      <input name="utf8" type="hidden" value="✓">
+      <input type="hidden" name="authenticity_token" value="2VVafTCRNpvLN8nmusY/+Ul0oi7Loa1DKzJhybrc2EKLum1qazshy379qQHzwFAfCDb3MVuEhlRy1Qs/OewBOw==">
+      <input type="hidden" value="<%= @user.id %>" name="question[user_id]" id="question_user_id">
 
-      <ul>
-      <% question.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+      <div class="form-group">
+        <label for="question_title">Titulo</label>
+        <input type="text" class="form-control" name="question[title]" id="question_title">
+      </div>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+      <div class="form-group">
+        <label for="question_body">Descrição</label>
+        <textarea class="form-control" name="question[body]" id="question_body" rows="10"></textarea>
+      </div>
+
+      <div class="form-group">
+        <input type="submit" class="btn btn-primary pull-right" name="commit" value="Create Question" data-disable-with="Create Question">
+      </div>
+    </form>
   </div>
-
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_field :body %>
-  </div>
-
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>
