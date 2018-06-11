@@ -16,7 +16,8 @@
       <thead>
       <tr>
         <th>Titulo</th>
-        <th>Postado por</th>
+        <th>Respostas</th>
+        <th>Por</th>
       </tr>
       </thead>
 
@@ -24,6 +25,7 @@
       <% @questions.each do |question| %>
         <tr>
           <td><a href="<%= "/questions/#{question.id}" %>"> <%= truncate(question.title, :length => 150, :omission => '...') %></a></td>
+          <td><%= question.answers.length %></td>
           <td><a href="<%= "/users/#{question.user.id}" %>"> <%= question.user.name %></a></td>
 <!--          <td><%#= link_to 'Show', question %></td>
           <td><%#= link_to 'Edit', edit_question_path(question) %></td>
