@@ -30,7 +30,9 @@ user = User.create(
   user = User.create(
                  name: Faker::StarWars.character,
                  group_id: 3,
-                 role: 1
+                 role: 1,
+                 username: Faker::Internet.user_name,
+                 password: 201125
   )
 end
 
