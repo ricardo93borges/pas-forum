@@ -32,7 +32,7 @@ user = User.create(
                  group_id: 3,
                  role: 1,
                  username: Faker::Internet.user_name,
-                 password: 201125
+                 password_digest: 201125
   )
 end
 

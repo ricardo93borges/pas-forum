@@ -36,7 +36,7 @@
     <form action="/answers" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓">
       <input type="hidden" name="authenticity_token" value="W2HmyHTK8Dv/JX3DdfaeTwrC5gyms19XtFwWLRMe9rzapMGOQfpoX6Ytv+mwLfdEiry6S/M2e/n0ObMumEI5aw==">
       <input type="hidden" name="answer[question_id]" id="answer_question_id" value="<%= @question.id %>">
-      <input type="hidden" value="<%= @user.id %>" name="answer[user_id]" id="answer_user_id">
+      <input type="hidden" value="<%= current_user.id %>" name="answer[user_id]" id="answer_user_id">
 
       <div class="form-group">
         <input type="text" placeholder="Titulo" class="form-control" name="answer[title]" id="answer_title">

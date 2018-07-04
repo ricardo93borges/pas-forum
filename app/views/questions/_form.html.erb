@@ -3,7 +3,7 @@
     <form action="/questions" accept-charset="UTF-8" method="post">
       <input name="utf8" type="hidden" value="✓">
       <input type="hidden" name="authenticity_token" value="2VVafTCRNpvLN8nmusY/+Ul0oi7Loa1DKzJhybrc2EKLum1qazshy379qQHzwFAfCDb3MVuEhlRy1Qs/OewBOw==">
-      <input type="hidden" value="<%= @user.id %>" name="question[user_id]" id="question_user_id">
+      <input type="hidden" value="<%= current_user.id %>" name="question[user_id]" id="question_user_id">
 
       <div class="form-group">
         <label for="question_title">Titulo</label>

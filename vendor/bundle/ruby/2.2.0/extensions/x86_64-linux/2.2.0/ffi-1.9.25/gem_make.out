@@ -1,0 +1,46 @@
+/opt/ruby-2.2.4/bin/ruby -r ./siteconf20180703-107763-18zzeq9.rb extconf.rb
+checking for ffi_call() in -lffi... yes
+checking for ffi_closure_alloc()... yes
+checking for ffi_raw_call()... yes
+checking for ffi_prep_raw_closure()... yes
+checking for shlwapi.h... no
+checking for ruby/thread.h... yes
+checking for rb_thread_blocking_region()... no
+checking for rb_thread_call_with_gvl()... yes
+checking for rb_thread_call_without_gvl()... yes
+checking for ffi_prep_cif_var()... no
+creating extconf.h
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling Pointer.c
+compiling ffi.c
+compiling FunctionInfo.c
+compiling ClosurePool.c
+compiling Type.c
+compiling Struct.c
+compiling MemoryPointer.c
+compiling DataConverter.c
+compiling LastError.c
+compiling Call.c
+compiling MappedType.c
+compiling Types.c
+compiling StructByReference.c
+compiling Function.c
+compiling DynamicLibrary.c
+compiling Platform.c
+compiling StructByValue.c
+compiling Variadic.c
+compiling Buffer.c
+compiling Thread.c
+compiling ArrayType.c
+compiling LongDouble.c
+compiling AbstractMemory.c
+compiling MethodHandle.c
+compiling StructLayout.c
+linking shared-object ffi_c.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 ffi_c.so ./.gem.20180703-107763-12jp74t

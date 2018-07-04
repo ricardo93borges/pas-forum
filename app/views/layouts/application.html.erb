@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>Forum</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -27,11 +29,25 @@
 
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-              <li><a href="/">Home</a></li>
+              <% if logged_in? %>
+              <li><a href="/questions">Home</a></li>
               <li><a href="/groups">Grupos</a></li>
               <li><a href="/users">Usuarios</a></li>
               <li><a href="/questions/new">Perguntar</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perfil <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><%= link_to "Profile", current_user %></li>
+                    <li><%= link_to "Settings", "/users/#{current_user.id}/edit" %></li>
+                    <li role="separator" class="divider"></li>
+                    <li><%= link_to "Log out", logout_path, method: :delete %></li>
+                  </ul>
+                </li>
+              <% else %>
+                <li><%= link_to "Log in", login_path %></li>
+              <% end %>
             </ul>
+
           </div>
         </div>
       </nav>

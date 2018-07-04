@@ -1,0 +1,76 @@
+/opt/ruby-2.2.4/bin/ruby -r ./siteconf20180703-73019-107sdgq.rb extconf.rb
+checking for main() in -lpthread... yes
+<stdin>:2:5: error: #error A compiler that supports at least C++11 is required in order to compile this project.
+
+
+WARNING: C++11 support is required for compiling mini_racer. Please make sure
+you are using a compiler that supports at least C++11. Examples of such
+compilers are GCC 4.7+ and Clang 3.2+.
+
+If you are using Travis, consider either migrating your build to Ubuntu Trusty or
+installing GCC 4.8. See mini_racer's README.md for more information.
+
+
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling mini_racer_extension.cc
+In file included from mini_racer_extension.cc:4:
+/home/forumprog/apps_rails/pasforum/vendor/bundle/ruby/2.2.0/gems/libv8-6.3.292.48.1-x86_64-linux/vendor/v8/include/v8.h:339: error: expected unqualified-id before ‘using’
+/home/forumprog/apps_rails/pasforum/vendor/bundle/ruby/2.2.0/gems/libv8-6.3.292.48.1-x86_64-linux/vendor/v8/include/v8.h: In constructor ‘v8::MaybeLocal<T>::MaybeLocal()’:
+/home/forumprog/apps_rails/pasforum/vendor/bundle/ruby/2.2.0/gems/libv8-6.3.292.48.1-x86_64-linux/vendor/v8/include/v8.h:356: error: ‘nullptr’ was not declared in this scope
+/home/forumprog/apps_rails/pasforum/vendor/bundle/ruby/2.2.0/gems/libv8-6.3.292.48.1-x86_64-linux/vendor/v8/include/v8.h: In member function ‘bool v8::MaybeLocal<T>::IsEmpty() const’:
+/home/forumprog/apps_rails/pasforum/vendor/bundle/ruby/2.2.0/gems/libv8-6.3.292.48.1-x86_64-linux/vendor/v8/include/v8.h:363: error: ‘nullptr’ was not declared in this scope
+/home/forumprog/apps_rails/pasforum/vendor/bundle/ruby/2.2.0/gems/libv8-6.3.292.48.1-x86_64-linux/vendor/v8/include/v8.h: In member function ‘bool v8::MaybeLocal<T>::ToLocal(v8::Local<S>*) const’:
+/home/forumprog/apps_rails/pasforum/vendor/bundle/ruby/2.2.0/gems/libv8-6.3.292.48.1-x86_64-linux/vendor/v8/include/v8.h:371: error: ‘nullptr’ was not declared in this scope
+/home/forumprog/apps_rails/pasforum/vendor/bundle/ruby/2.2.0/gems/libv8-6.3.292.48.1-x86_64-linux/vendor/v8/include/v8.h: In constructor ‘v8::Eternal<T>::Eternal()’:
+/home/forumprog/apps_rails/pasforum/vendor/bundle/ruby/2.2.0/gems/libv8-6.3.292.48.1-x86_64-linux/vendor/v8/include/v8.h:400: error: ‘nullptr’ was not declared in this scope
+/home/forumprog/apps_rails/pasforum/vendor/bundle/ruby/2.2.0/gems/libv8-6.3.292.48.1-x86_64-linux/vendor/v8/include/v8.h: In constructor ‘v8::Eternal<T>::Eternal(v8::Isolate*, v8::Local<S>)’:
+/home/forumprog/apps_rails/pasforum/vendor/bundle/ruby/2.2.0/gems/libv8-6.3.292.48.1-x86_64-linux/vendor/v8/include/v8.h:402: error: ‘nullptr’ was not declared in this scope
+/home/forumprog/apps_rails/pasforum/vendor/bundle/ruby/2.2.0/gems/libv8-6.3.292.48.1-x86_64-linux/vendor/v8/include/v8.h: In member function ‘bool v8::Eternal<T>::IsEmpty() const’:
+/home/forumprog/apps_rails/pasforum/vendor/bundle/ruby/2.2.0/gems/libv8-6.3.292.48.1-x86_64-linux/vendor/v8/include/v8.h:407: error: ‘nullptr’ was not declared in this scope
+/home/forumprog/apps_rails/pasforum/vendor/bundle/ruby/2.2.0/gems/libv8-6.3.292.48.1-x86_64-linux/vendor/v8/include/v8.h: In member function ‘bool v8::WeakCallbackInfo<T>::IsFirstPass() const’:
+/home/forumprog/apps_rails/pasforum/vendor/bundle/ruby/2.2.0/gems/libv8-6.3.292.48.1-x86_64-linux/vendor/v8/include/v8.h:447: error: ‘nullptr’ was not declared in this scope
+/home/forumprog/apps_rails/pasforum/vendor/bundle/ruby/2.2.0/gems/libv8-6.3.292.48.1-x86_64-linux/vendor/v8/include/v8.h: In constructor ‘v8::Global<T>::Global()’:
+/home/forumprog/apps_rails/pasforum/vendor/bundle/ruby/2.2.0/gems/libv8-6.3.292.48.1-x86_64-linux/vendor/v8/include/v8.h:781: error: ‘nullptr’ was not declared in this scope
+/home/forumprog/apps_rails/pasforum/vendor/bundle/ruby/2.2.0/gems/libv8-6.3.292.48.1-x86_64-linux/vendor/v8/include/v8.h: In constructor ‘v8::Global<T>::Global(v8::Global<T>&&)’:
+/home/forumprog/apps_rails/pasforum/vendor/bundle/ruby/2.2.0/gems/libv8-6.3.292.48.1-x86_64-linux/vendor/v8/include/v8.h:806: error: ‘nullptr’ was not declared in this scope
+/home/forumprog/apps_rails/pasforum/vendor/bundle/ruby/2.2.0/gems/libv8-6.3.292.48.1-x86_64-linux/vendor/v8/include/v8.h: In member function ‘v8::Global<T>& v8::Global<T>::operator=(v8::Global<S>&&)’:
+/home/forumprog/apps_rails/pasforum/vendor/bundle/ruby/2.2.0/gems/libv8-6.3.292.48.1-x86_64-linux/vendor/v8/include/v8.h:818: error: ‘nullptr’ was not declared in this scope
+/home/forumprog/apps_rails/pasforum/vendor/bundle/ruby/2.2.0/gems/libv8-6.3.292.48.1-x86_64-linux/vendor/v8/include/v8.h: At global scope:
+/home/forumprog/apps_rails/pasforum/vendor/bundle/ruby/2.2.0/gems/libv8-6.3.292.48.1-x86_64-linux/vendor/v8/include/v8.h:844: error: expected unqualified-id before ‘using’
+/home/forumprog/apps_rails/pasforum/vendor/bundle/ruby/2.2.0/gems/libv8-6.3.292.48.1-x86_64-linux/vendor/v8/include/v8.h:1238: error: ‘nullptr’ was not declared in this scope
+/home/forumprog/apps_rails/pasforum/vendor/bundle/ruby/2.2.0/gems/libv8-6.3.292.48.1-x86_64-linux/vendor/v8/include/v8.h:1244: error: ‘nullptr’ was not declared in this scope
+/home/forumprog/apps_rails/pasforum/vendor/bundle/ruby/2.2.0/gems/libv8-6.3.292.48.1-x86_64-linux/vendor/v8/include/v8.h: In constructor ‘v8::RegisterState::RegisterState()’:
+/home/forumprog/apps_rails/pasforum/vendor/bundle/ruby/2.2.0/gems/libv8-6.3.292.48.1-x86_64-linux/vendor/v8/include/v8.h:1795: error: ‘nullptr’ was not declared in this scope
+/home/forumprog/apps_rails/pasforum/vendor/bundle/ruby/2.2.0/gems/libv8-6.3.292.48.1-x86_64-linux/vendor/v8/include/v8.h: At global scope:
+/home/forumprog/apps_rails/pasforum/vendor/bundle/ruby/2.2.0/gems/libv8-6.3.292.48.1-x86_64-linux/vendor/v8/include/v8.h:2507: warning: ISO C++ forbids declaration of ‘constexpr’ with no type
+/home/forumprog/apps_rails/pasforum/vendor/bundle/ruby/2.2.0/gems/libv8-6.3.292.48.1-x86_64-linux/vendor/v8/include/v8.h:2507: error: expected ‘;’ before ‘int’
+/home/forumprog/apps_rails/pasforum/vendor/bundle/ruby/2.2.0/gems/libv8-6.3.292.48.1-x86_64-linux/vendor/v8/include/v8.h:3262: error: ‘nullptr’ was not declared in this scope
+/home/forumprog/apps_rails/pasforum/vendor/bundle/ruby/2.2.0/gems/libv8-6.3.292.48.1-x86_64-linux/vendor/v8/include/v8.h: In member function ‘v8::MaybeLocal<v8::Object> v8::Function::NewInstance(v8::Local<v8::Context>) const’:
+/home/forumprog/apps_rails/pasforum/vendor/bundle/ruby/2.2.0/gems/libv8-6.3.292.48.1-x86_64-linux/vendor/v8/include/v8.h:3903: error: ‘nullptr’ was not declared in this scope
+/home/forumprog/apps_rails/pasforum/vendor/bundle/ruby/2.2.0/gems/libv8-6.3.292.48.1-x86_64-linux/vendor/v8/include/v8.h: At global scope:
+/home/forumprog/apps_rails/pasforum/vendor/bundle/ruby/2.2.0/gems/libv8-6.3.292.48.1-x86_64-linux/vendor/v8/include/v8.h:4172: error: function definition does not declare parameters
+/home/forumprog/apps_rails/pasforum/vendor/bundle/ruby/2.2.0/gems/libv8-6.3.292.48.1-x86_64-linux/vendor/v8/include/v8.h:4226: error: expected unqualified-id before ‘&’ token
+/home/forumprog/apps_rails/pasforum/vendor/bundle/ruby/2.2.0/gems/libv8-6.3.292.48.1-x86_64-linux/vendor/v8/include/v8.h:4226: error: expected ‘)’ before ‘&’ token
+/home/forumprog/apps_rails/pasforum/vendor/bundle/ruby/2.2.0/gems/libv8-6.3.292.48.1-x86_64-linux/vendor/v8/include/v8.h:4226: error: expected ‘;’ before ‘&’ token
+In file included from /usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../include/c++/4.4.7/bits/ostream_insert.h:36,
+                 from /usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../include/c++/4.4.7/string:46,
+                 from /usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../include/c++/4.4.7/bits/locale_classes.h:42,
+                 from /usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../include/c++/4.4.7/bits/ios_base.h:43,
+                 from /usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../include/c++/4.4.7/ios:43,
+                 from /usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../include/c++/4.4.7/istream:40,
+                 from /usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../include/c++/4.4.7/fstream:40,
+                 from /home/forumprog/apps_rails/pasforum/vendor/bundle/ruby/2.2.0/gems/libv8-6.3.292.48.1-x86_64-linux/vendor/v8/include/libplatform/v8-tracing.h:8,
+                 from /home/forumprog/apps_rails/pasforum/vendor/bundle/ruby/2.2.0/gems/libv8-6.3.292.48.1-x86_64-linux/vendor/v8/include/libplatform/libplatform.h:9,
+                 from mini_racer_extension.cc:5:
+/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../include/c++/4.4.7/cxxabi-forced.h:29: error: expected ‘;’ before end of line
+/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../include/c++/4.4.7/cxxabi-forced.h:29: error: expected ‘}’ before end of line
+/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../include/c++/4.4.7/cxxabi-forced.h:29: error: expected unqualified-id before end of line
+/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../include/c++/4.4.7/cxxabi-forced.h:29: error: expected ‘}’ before end of line
+/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../include/c++/4.4.7/cxxabi-forced.h:29: error: expected declaration before end of line
+make: *** [mini_racer_extension.o] Error 1
+
+make failed, exit code 2

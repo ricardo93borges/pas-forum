@@ -1,0 +1,15 @@
+/opt/ruby-2.2.4/bin/ruby -r ./siteconf20180703-107763-lpr6xi.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling context.c
+compiling byebug.c
+compiling breakpoint.c
+compiling threads.c
+compiling locker.c
+linking shared-object byebug/byebug.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.so ./.gem.20180703-107763-9mtzh1/byebug

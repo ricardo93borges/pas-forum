@@ -1,0 +1,35 @@
+/opt/ruby-2.2.4/bin/ruby -r ./siteconf20180703-107763-1h99qlm.rb extconf.rb
+checking for ruby/st.h... yes
+checking for st.h... yes
+checking for rb_str_replace() in ruby.h... yes
+checking for rb_intern_str() in ruby.h... yes
+checking for rb_sym2str() in ruby.h... yes
+checking for rb_str_intern() in ruby.h... yes
+checking for rb_block_lambda() in ruby.h... yes
+checking for rb_hash_dup() in ruby.h... yes
+checking for rb_hash_clear() in ruby.h... yes
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling packer_ext_registry.c
+compiling unpacker.c
+compiling factory_class.c
+compiling extension_value_class.c
+compiling rbinit.c
+compiling buffer_class.c
+compiling rmem.c
+compiling buffer.c
+compiling unpacker_class.c
+unpacker_class.c:219: warning: ‘Unpacker_peek_next_type’ defined but not used
+compiling packer.c
+packer.c: In function ‘msgpack_packer_write_other_value’:
+packer_ext_registry.h:85: warning: ‘lookup_class’ may be used uninitialized in this function
+packer_ext_registry.h:85: note: ‘lookup_class’ was declared here
+compiling unpacker_ext_registry.c
+compiling packer_class.c
+linking shared-object msgpack/msgpack.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 msgpack.so ./.gem.20180703-107763-1a9lgws/msgpack

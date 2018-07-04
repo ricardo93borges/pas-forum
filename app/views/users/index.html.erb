@@ -22,6 +22,7 @@
       <thead>
       <tr>
         <th>Nome</th>
+        <th>Username</th>
         <th>Grupo</th>
         <th>Perfil</th>
       </tr>
@@ -31,6 +32,7 @@
       <% @users.each do |user| %>
         <tr>
           <td><a href="<%= "/users/#{user.id}" %>"> <%= user.name %></a></td>
+          <td><%= user.username %></td>
           <td><%= user.group.name %></td>
           <td><%= user.role == 2 ? "Moderador" : "Comum" %></td>
         </tr>
